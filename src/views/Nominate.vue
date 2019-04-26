@@ -19,10 +19,15 @@
         <v-container>
           <v-layout row wrap>
             <v-flex lg6 offset-lg2>
-              <v-text-field name="name" @input="ev => form.name = ev.target.value" label="Name"></v-text-field>
+              <v-text-field
+                name="name"
+                value
+                @input="ev => form.name = ev.target.value"
+                label="Name"
+              ></v-text-field>
             </v-flex>
 
-            <v-btn>Submit</v-btn>
+            <v-btn type="submit">Submit</v-btn>
           </v-layout>
         </v-container>
       </v-form>
@@ -57,9 +62,11 @@ export default {
         })
       })
         .then(() => {
+          alert("ok");
           //this.$router.push("thanks");
         })
         .catch(() => {
+          alert("nope");
           //this.$router.push("404");
         });
     }
