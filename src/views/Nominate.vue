@@ -19,12 +19,7 @@
         <v-container>
           <v-layout row wrap>
             <v-flex lg6 offset-lg2>
-              <v-text-field
-                name="name"
-                value
-                @input="ev => form.name = ev.target.value"
-                label="Name"
-              ></v-text-field>
+              <v-text-field name="name" @input="ev => form.name = ev.target.value" label="Name"></v-text-field>
             </v-flex>
 
             <v-btn type="submit">Submit</v-btn>
