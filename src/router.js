@@ -1,10 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Home from './views/Home.vue';
-/*import MyMom from './views/MyMom.vue';
-import FurMoms from './views/FurMoms.vue';
-import DevMoms from './views/DevMoms.vue';
-import Nominate from './views/Nominate.vue';*/
 
 Vue.use(Router);
 

@@ -8,7 +8,13 @@
         <h2>Know an amazing Mom who should be featured on this web site? Mominate her!</h2>
       </v-card-text>
 
-      <v-form name="mominate" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+      <v-form
+        @submit.prevent="handleSubmit"
+        name="mominate"
+        method="post"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+      >
         <input type="hidden" name="form-name" value="mominate">
         <v-container>
           <v-layout row wrap>
@@ -21,11 +27,42 @@
         </v-container>
       </v-form>
     </v-card>
-
-    <!--<v-layout wrap>
-      <v-flex xs12 sm4 md3 v-for="pet in dogs" :key="pet.breed">
-        <app-mom :mom="pet" @addToFavorites="addToFavorites"></app-mom>
-      </v-flex>
-    </v-layout>-->
   </v-container>
 </template>
+<script>
+import axios from "axios";
+
+export default {
+  name: "Nominate",
+  data() {
+    return {
+      form: {
+        askPerson: ""
+      },
+      panelists: ["Evan You", "Chris Fritz"]
+    };
+  },
+  methods: {
+    encode(data) {
+      return Object.keys(data)
+        .map(
+          key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+        )
+        .join("&");
+    },
+    handleSubmit() {
+      const axiosConfig = {
+        header: { "Content-Type": "application/x-www-form-urlencoded" }
+      };
+      axios.post(
+        "/",
+        this.encode({
+          "form-name": "mominate",
+          ...this.form
+        }),
+        axiosConfig
+      );
+    }
+  }
+};
+</script>

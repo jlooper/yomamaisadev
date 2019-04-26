@@ -7,7 +7,7 @@
           <v-btn color="white" to="/dev-moms" flat>Dev Moms</v-btn>
           <v-btn color="white" to="/my-mom" flat>My Mom</v-btn>
           <v-btn color="white" to="/fur-moms" flat>Fur Moms</v-btn>
-          <v-btn color="white" to="/nominate" flat>Nominate a Mom</v-btn>
+          <v-btn color="white" to="/nominate" flat>Mominate</v-btn>
         </v-toolbar-items>
       </v-toolbar>
       <router-view></router-view>
