@@ -19,7 +19,7 @@
         <v-container>
           <v-layout row wrap>
             <v-flex lg6 offset-lg2>
-              <v-text-field value="Your Name" label="Name"></v-text-field>
+              <v-text-field name="name" @input="ev => form.name = ev.target.value" label="Name"></v-text-field>
             </v-flex>
 
             <v-btn>Submit</v-btn>
@@ -30,16 +30,13 @@
   </v-container>
 </template>
 <script>
-import axios from "axios";
-
 export default {
   name: "Nominate",
   data() {
     return {
       form: {
-        askPerson: ""
-      },
-      panelists: ["Evan You", "Chris Fritz"]
+        name: ""
+      }
     };
   },
   methods: {
@@ -51,17 +48,20 @@ export default {
         .join("&");
     },
     handleSubmit() {
-      const axiosConfig = {
-        header: { "Content-Type": "application/x-www-form-urlencoded" }
-      };
-      axios.post(
-        "/",
-        this.encode({
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: this.encode({
           "form-name": "mominate",
           ...this.form
-        }),
-        axiosConfig
-      );
+        })
+      })
+        .then(() => {
+          //this.$router.push("thanks");
+        })
+        .catch(() => {
+          //this.$router.push("404");
+        });
     }
   }
 };
