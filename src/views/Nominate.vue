@@ -19,7 +19,7 @@
         <v-container>
           <v-layout row wrap>
             <v-flex lg6 offset-lg2>
-              <v-text-field name="name" @input="ev => form.name = ev.target.value" label="Name"></v-text-field>
+              <v-text-field v-model="name" name="name" label="Name"></v-text-field>
             </v-flex>
 
             <v-btn type="submit">Submit</v-btn>
@@ -34,6 +34,7 @@ export default {
   name: "Nominate",
   data() {
     return {
+      name: "",
       form: {
         name: ""
       }
@@ -51,10 +52,14 @@ export default {
       fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: this.encode({
+        /*body: this.encode({
           "form-name": "mominate",
           ...this.form
-        })
+        })*/
+        body: {
+          "form-name": "mominate",
+          name: this.name
+        }
       })
         .then(() => {
           alert("ok");
