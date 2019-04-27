@@ -8,7 +8,10 @@
         <h2>Know an amazing Mom who should be featured on this web site? Mominate her!</h2>
       </v-card-text>
       <div class="text-xs-center" v-if="submitted">
-        <v-alert type="success">Thank you for your interest, we will consider your submission</v-alert>
+        <v-alert
+          :value="true"
+          type="success"
+        >Thank you for your interest, we will consider your submission</v-alert>
       </div>
       <v-form
         @submit.prevent="handleSubmit"
