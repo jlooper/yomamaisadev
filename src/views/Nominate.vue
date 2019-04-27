@@ -38,13 +38,17 @@
               ></v-text-field>
             </v-flex>
           </v-layout>
-          <v-container fluid>
-            <v-radio-group v-model="momType" :mandatory="true" :rules="rules">
-              <v-radio label="I'm a Mom who's a Developer" value="devMom"></v-radio>
-              <v-radio label="I'm nominating a Mom who's a Developer" value="myMom"></v-radio>
-              <v-radio label="I'm a Fur Mom" value="furMom"></v-radio>
-            </v-radio-group>
-          </v-container>
+          <v-layout row wrap>
+            <v-flex lg6 offset-lg2>
+              <v-container fluid>
+                <v-radio-group v-model="momType" :mandatory="true" :rules="rules">
+                  <v-radio label="I'm a Mom who's a Developer" value="devMom"></v-radio>
+                  <v-radio label="I'm nominating a Mom who's a Developer" value="myMom"></v-radio>
+                  <v-radio label="I'm a Fur Mom" value="furMom"></v-radio>
+                </v-radio-group>
+              </v-container>
+            </v-flex>
+          </v-layout>
           <v-layout row wrap>
             <v-flex lg6 offset-lg2>
               <v-text-field
