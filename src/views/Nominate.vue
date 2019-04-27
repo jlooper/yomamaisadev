@@ -7,13 +7,17 @@
       <v-card-text>
         <h2>Know an amazing Mom who should be featured on this web site? Mominate her!</h2>
       </v-card-text>
-
+      <div class="text-xs-center" v-if="submitted">
+        <h2>Thank you for your interest, we will consider your submission</h2>
+      </div>
       <v-form
         @submit.prevent="handleSubmit"
         name="mominate"
         method="post"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
+        v-else
+        v-model="valid"
       >
         <input type="hidden" name="form-name" value="mominate">
         <v-container>
@@ -60,7 +64,7 @@
               ></v-textarea>
             </v-flex>
           </v-layout>
-          <v-btn type="submit">Submit</v-btn>
+          <v-btn :disabled="!valid" type="submit">Submit</v-btn>
         </v-container>
       </v-form>
     </v-card>
@@ -76,7 +80,15 @@ export default {
       momBio: "",
       picUrl: "",
       momType: "",
-      rules: [v => !!v || "This field is required"]
+      submitted: false,
+      valid: true,
+      rules: [
+        name => !!name,
+        momBio => !!momBio,
+        picUrl => !!picUrl,
+        momType => !!momType,
+        v => !!v || "This field is required"
+      ]
     };
   },
   methods: {
@@ -88,6 +100,7 @@ export default {
         .join("&");
     },
     handleSubmit() {
+      this.submitted = true;
       fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -96,7 +109,8 @@ export default {
           name: this.name,
           momName: this.momName,
           momBio: this.momBio,
-          picUrl: this.picUrl
+          picUrl: this.picUrl,
+          momType: this.momType
         })
       })
         .then(() => {
