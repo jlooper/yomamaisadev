@@ -25,8 +25,6 @@
           <v-layout row wrap>
             <v-flex lg6 offset-lg2>
               <v-text-field
-                required
-                :rules="rules"
                 v-model="momName"
                 name="momName"
                 label="Mom's Name (if you're nominating yourself, leave this blank)"
