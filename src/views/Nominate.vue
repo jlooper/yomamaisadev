@@ -49,17 +49,15 @@ export default {
         .join("&");
     },
     handleSubmit() {
+      //console.log(this.encode(this.name));
       fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        /*body: this.encode({
+        body: this.encode({
           "form-name": "mominate",
-          ...this.form
-        })*/
-        body: {
-          "form-name": "mominate",
+          //...this.form
           name: this.name
-        }
+        })
       })
         .then(() => {
           alert("ok");
