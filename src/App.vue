@@ -1,34 +1,32 @@
 <template>
   <v-app>
-    <main>
-      <v-toolbar color="primary">
-        <v-toolbar-side-icon class="hidden-md-and-up" @click.stop="drawer = !drawer"></v-toolbar-side-icon>
-        <v-toolbar-items class="hidden-sm-and-down">
-          <v-btn color="white" to="/" flat>Dev Moms</v-btn>
-          <v-btn color="white" to="/fur-moms" flat>Fur Moms</v-btn>
-          <v-btn color="white" to="/nominate" flat>Mominate</v-btn>
-        </v-toolbar-items>
-      </v-toolbar>
-      <v-navigation-drawer v-model="drawer" disable-resize-watcher app class="primary" light>
-        <v-layout column flex>
-          <v-btn color="white" to="/" flat>Dev Moms</v-btn>
-          <v-btn color="white" to="/fur-moms" flat>Fur Moms</v-btn>
-          <v-btn color="white" to="/nominate" flat>Mominate</v-btn>
-        </v-layout>
-      </v-navigation-drawer>
-      <router-view></router-view>
-      <v-footer fixed height="auto" color="primary" center>
-        <v-layout align-center justify-center>
-          <v-btn
-            color="white"
-            flat
-            round
-            href="http://jenlooper.com"
-            target="_blank"
-          >&copy Jen Looper - A Project of Ladeez First Media</v-btn>
-        </v-layout>
-      </v-footer>
-    </main>
+    <v-toolbar color="primary">
+      <v-toolbar-side-icon class="hidden-md-and-up" @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+      <v-toolbar-items class="hidden-sm-and-down">
+        <v-btn color="white" to="/" flat>Dev Moms</v-btn>
+        <v-btn color="white" to="/fur-moms" flat>Fur Moms</v-btn>
+        <v-btn color="white" to="/nominate" flat>Mominate</v-btn>
+      </v-toolbar-items>
+    </v-toolbar>
+    <v-navigation-drawer v-model="drawer" class="primary" disable-resize-watcher app light>
+      <v-layout column flex>
+        <v-btn color="white" to="/" flat>Dev Moms</v-btn>
+        <v-btn color="white" to="/fur-moms" flat>Fur Moms</v-btn>
+        <v-btn color="white" to="/nominate" flat>Mominate</v-btn>
+      </v-layout>
+    </v-navigation-drawer>
+    <router-view></router-view>
+    <v-footer fixed height="auto" color="primary" center>
+      <v-layout align-center justify-center>
+        <v-btn
+          color="white"
+          flat
+          round
+          href="http://jenlooper.com"
+          target="_blank"
+        >&copy Jen Looper - A Project of Ladeez First Media</v-btn>
+      </v-layout>
+    </v-footer>
   </v-app>
 </template>
 
@@ -58,7 +56,7 @@ html {
 export default {
   data() {
     return {
-      drawer: null
+      drawer: false
     };
   },
   methods: {
