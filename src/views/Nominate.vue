@@ -121,11 +121,13 @@ export default {
         })
       })
         .then(() => {
-          alert("ok");
+          alert(
+            "Thank you for your submission! After an approval process, we will post this entry."
+          );
           //this.$router.push("thanks");
         })
         .catch(() => {
-          alert("nope");
+          alert("Sorry, there seems to have been an error.");
           //this.$router.push("404");
         });
     }
