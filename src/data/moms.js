@@ -92,10 +92,19 @@ export default [
 	{
 		name: 'Allison McMillan',
 		type: 'mom',
-		nominatedby: '',
+		nominatedby: 'Sharon DiOrio',
 		bio:
 			"Allison McMillan is an Engineering Manager at GitHub for teams such as Atom. She's been a startup founder, community builder, software developer, and Managing Director of a national non-profit. She's a Mozilla Tech Speaker and recently started a podcast about being a parent in tech, Parent Driven Development. When she's not coding, she encourages her toddler's climbing skills, makes faces at her infant, or pretends she has time to bake.",
 		img: './assets/allisonmcmillan.jpg',
+		approved: true,
+	},
+	{
+		name: 'LaShauna Nichols',
+		type: 'mom',
+		nominatedby: 'Sharon DiOrio',
+		bio:
+			'La Shauna founded UTC, a minority led tech non-profit whose focus is delivering tech related skill building for all ages. With a graduate degree from Colorado Tech, La Shauna has spent the last 12 years developing highly-scalable applications in higher-ed, the oil and gas industry, and healthcare. Outside of community works, La Shauna serves as a Senior UI Developer at McKesson. LaShauna is mom to Nicholas, 15 in July.',
+		img: './assets/lashaunanichols.jpg',
 		approved: true,
 	},
 ];
