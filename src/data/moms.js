@@ -63,15 +63,6 @@ export default [
 		approved: true,
 	},
 	{
-		name: 'Jess West',
-		type: 'furmom',
-		nominatedby: '',
-		bio:
-			'Jess is a dog lover, JavaScript and test enthusiast, and a Community enabler - Jessica loves to love. She and Shorty post on social media when together.💖',
-		img: './assets/jesswest.jpg',
-		approved: true,
-	},
-	{
 		name: 'Sandi Barr',
 		type: 'mom',
 		nominatedby: '',
@@ -105,6 +96,24 @@ export default [
 		bio:
 			'La Shauna founded UTC, a minority led tech non-profit whose focus is delivering tech related skill building for all ages. With a graduate degree from Colorado Tech, La Shauna has spent the last 12 years developing highly-scalable applications in higher-ed, the oil and gas industry, and healthcare. Outside of community works, La Shauna serves as a Senior UI Developer at McKesson. LaShauna is mom to Nicholas, 15 in July.',
 		img: './assets/lashaunanichols.jpg',
+		approved: true,
+	},
+	{
+		name: 'Dana Jones',
+		type: 'mom',
+		nominatedby: '',
+		bio:
+			"Dana is an Engineering Manager at Abstract and a mom of four amazing teenagers. She's been a software developer for 20 years, and now works to grow diverse, productive, happy development teams.",
+		img: './assets/danajones.jpg',
+		approved: true,
+	},
+	{
+		name: 'Jess West',
+		type: 'furmom',
+		nominatedby: '',
+		bio:
+			'Jess is a dog lover, JavaScript and test enthusiast, and a Community enabler - Jessica loves to love. She and Shorty post on social media when together.💖',
+		img: './assets/jesswest.jpg',
 		approved: true,
 	},
 ];
