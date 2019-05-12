@@ -83,7 +83,7 @@ export default [
 	{
 		name: 'Allison McMillan',
 		type: 'mom',
-		nominatedby: 'Sharon DiOrio',
+		nominatedby: '',
 		bio:
 			"Allison McMillan is an Engineering Manager at GitHub for teams such as Atom. She's been a startup founder, community builder, software developer, and Managing Director of a national non-profit. She's a Mozilla Tech Speaker and recently started a podcast about being a parent in tech, Parent Driven Development. When she's not coding, she encourages her toddler's climbing skills, makes faces at her infant, or pretends she has time to bake.",
 		img: './assets/allisonmcmillan.jpg',
@@ -105,6 +105,24 @@ export default [
 		bio:
 			"Dana is an Engineering Manager at Abstract and a mom of four amazing teenagers. She's been a software developer for 20 years, and now works to grow diverse, productive, happy development teams.",
 		img: './assets/danajones.jpg',
+		approved: true,
+	},
+	{
+		name: 'Michele Cynowicz',
+		type: 'mom',
+		nominatedby: 'Jen Looper',
+		bio:
+			'Michele "CodePirate" Cynowicz has been working in web application development for over a decade. Having been involved in Girl Scouts for her entire life, Michele is passionate about building up confidence in women of all ages, especially in technology. A proud mother to a set of twins, Michele enjoys introducing kids to programming.',
+		img: './assets/michelecynowicz.jpg',
+		approved: true,
+	},
+	{
+		name: 'Bekah Hawrot Weigel',
+		type: 'mom',
+		nominatedby: '',
+		bio:
+			"As a mom of four and on her way to becoming a second career dev, Bekah's passion to use code for good has helped to her overcome trauma and try to find ways to help others to overcome trauma as well.",
+		img: './assets/bekahhawrotweigel.jpg',
 		approved: true,
 	},
 	{

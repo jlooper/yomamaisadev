@@ -9,8 +9,8 @@
       </v-card-text>
 
       <v-layout wrap>
-        <v-flex xs12 sm4 md4 v-for="mom in moms" :key="mom.name">
-          <app-mom v-if="mom.type=='mom'" :mom="mom"></app-mom>
+        <v-flex v-if="mom.type=='mom'" xs12 sm4 md4 v-for="mom in moms" :key="mom.name">
+          <app-mom :mom="mom"></app-mom>
         </v-flex>
       </v-layout>
     </v-card>
