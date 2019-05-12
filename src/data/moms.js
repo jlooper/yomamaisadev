@@ -134,4 +134,22 @@ export default [
 		img: './assets/jesswest.jpg',
 		approved: true,
 	},
+	{
+		name: 'Tomomi Imura',
+		type: 'furmom',
+		nominatedby: 'Vanessa Wang',
+		bio:
+			"Tomomi is such a super fur mom, she created the famous HTTP cats (http.cat/). She's an awesome speaker, developer, developer advocate, technologist, connector of cool people, sketch artist ...where does this list end?",
+		img: './assets/tomomiimura.jpg',
+		approved: true,
+	},
+	{
+		name: 'Ayşegül Yönet',
+		type: 'furmom',
+		nominatedby: 'Vanessa Wang',
+		bio:
+			'In addition to being a fabulous fur mom, Ayşegül is so many things: fantastic teacher, leader, speaker, developer, and advocate for women and URMs in STEM.',
+		img: './assets/aysegulyonet.jpg',
+		approved: true,
+	},
 ];
