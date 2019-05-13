@@ -126,6 +126,15 @@ export default [
 		approved: true,
 	},
 	{
+		name: 'Christina Gorton',
+		type: 'mom',
+		nominatedby: '',
+		bio:
+			'Christina is a self-taught developer who has been working remotely as a front-end developer for the last 3 years. Before that she was a stay at home mom for 4 little ones. Christina currently works as an instructor for Design+Code. She loves to give back to the tech community through teaching, writing, webinars, and mentoring.',
+		img: './assets/christinagorton.jpg',
+		approved: true,
+	},
+	{
 		name: 'Jess West',
 		type: 'furmom',
 		nominatedby: '',
