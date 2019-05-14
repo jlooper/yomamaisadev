@@ -135,6 +135,15 @@ export default [
 		approved: true,
 	},
 	{
+		name: 'Karla Lopez',
+		type: 'mom',
+		nominatedby: 'Claire Bendersky',
+		bio:
+			"Karla started her career developing edtech products, then worked on a knowledge management platform that drove national aviation regulatory changes. For the past 7 years she's worked in product management and biz dev. Karla graduated in Class 1 of Startup Chile with her first company. Now she's a global expert in online market research data.",
+		img: './assets/karlalopez.jpg',
+		approved: true,
+	},
+	{
 		name: 'Jess West',
 		type: 'furmom',
 		nominatedby: '',
