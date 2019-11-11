@@ -144,6 +144,15 @@ export default [
 		approved: true,
 	},
 	{
+		name: 'Sara McCombs',
+		type: 'mom',
+		nominatedby: '',
+		bio:
+			"I personally celebrate reinventing yourself, following true passions and interests, not being afraid to learn something new no matter your age, and overcoming obstacles no matter what they may be. As Eleanor Roosevelt put it so much more eloquently than I ever could, 'The future belongs to those who believe in the beauty of their dreams.'",
+		img: './assets/saramccombs.jpg',
+		approved: true,
+	},
+	{
 		name: 'Jess West',
 		type: 'furmom',
 		nominatedby: '',
